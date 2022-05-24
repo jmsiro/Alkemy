@@ -17,5 +17,5 @@ for key, value in urls.items():
     upload_file(file_path, key)
     time.sleep(5)
     paths.append(file_path)
-
+time.sleep(5)
 normalize_data(paths)

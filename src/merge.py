@@ -50,7 +50,7 @@ def normalize_data(paths = list):
     engine = create_engine("postgresql+psycopg2://root:root@127.0.0.1:5432/postgres")
  
     # try:
-    data_file.to_sql('Alkemydb', engine, if_exists= 'replace', index= False)
+    data_file.to_sql('alkemydb', engine, if_exists= 'replace', index= False)
     
     engine.execute("""ALTER TABLE Alkemydb 
                    ADD fecha_de_carga date DEFAULT """ + "'" + datetime.now().strftime("%Y-%m-%d") + "'" + ";")

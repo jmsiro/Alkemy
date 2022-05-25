@@ -1,3 +1,5 @@
+import logging
+import traceback
 import pandas as pd
 import psycopg2
 from sqlalchemy import create_engine
@@ -29,6 +31,7 @@ def normalize_data(paths = list):
 
     # Iterates through the Data Frames and through the Columns of each of them, then compares the columns titles with the nomalized values given in 'needed_data'. 
     # Finally replace the column titles with the corresponding key from 'needed_data'. 
+    logging.info("Normalizing data...")
     for df in dfs:
         for col in df.columns:
             for k, v in needed_data.items():
@@ -37,7 +40,7 @@ def normalize_data(paths = list):
                 else:
                     pass            
 
-    # Creates a nwe data frame appending the ones given. The resulting dataframe only contains the columns that the 'input' data frames shares.
+    # Creates a new data frame appending the ones given. The resulting dataframe only contains the columns that the 'input' data frames shares.
     data_file = pd.concat(dfs, join='inner', ignore_index=True,)
 
     # Eliminates the shared columns that are not needed for.
@@ -46,16 +49,20 @@ def normalize_data(paths = list):
             pass
         else:
             data_file.drop(labels=title, axis='columns', inplace=True)
-    
+
+    logging.info("Creating connection with DB Server...")    
     engine = create_engine("postgresql+psycopg2://root:root@127.0.0.1:5432/postgres")
  
-    # try:
-    data_file.to_sql('alkemydb', engine, if_exists= 'replace', index= False)
+    try:
+        data_file.to_sql('alkemydb', engine, if_exists= 'replace', index= False)
     
-    engine.execute("""ALTER TABLE Alkemydb 
+        engine.execute("""ALTER TABLE Alkemydb 
                    ADD fecha_de_carga date DEFAULT """ + "'" + datetime.now().strftime("%Y-%m-%d") + "'" + ";")
 
-    # except:
-    #     print("Fallo la conexion...")
-    # finally:
-    engine.dispose()
+        logging.info("Table 'alkemydb' created/updated")
+        
+    except Exception as er:
+        logging.error(traceback.fomat_exc())
+    finally:
+        logging.info("Closing connection...")
+        engine.dispose()

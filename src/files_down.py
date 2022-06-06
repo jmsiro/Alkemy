@@ -1,4 +1,3 @@
-import logging
 import requests
 import locale
 import os
@@ -9,6 +8,8 @@ from datetime import datetime
 locale.setlocale(locale.LC_ALL, ("es_ES", "UTF-8"))
 
 def download_dbs(nombre, url):
+    """This funtion downloads the data files."""
+
     # Request - Downloads the file
     r = requests.get(url, allow_redirects=True)
     logging.info("Downloading from %s", url)

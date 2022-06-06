@@ -1,13 +1,10 @@
 import logging
 import traceback
 import pandas as pd
-import psycopg2
-from sqlalchemy import create_engine
 from datetime import datetime
-#dialect+driver://username:password@host:port/database
 
-
-def normalize_data(paths = list):
+def normalize_data(en, paths = list):
+    """This function normalizes data from the raw tables and creates a new table with the needed data."""
     
     dfs = []
     for file in paths:
@@ -36,7 +33,7 @@ def normalize_data(paths = list):
         for col in df.columns:
             for k, v in needed_data.items():
                 if col.lower() in v:
-                    df.rename(columns={col:k}, inplace=True) # inplace = True means that it does not return a copy, the renaming is done over the original data frame.
+                    df.rename(columns={col:k}, inplace=True) # 'inplace=True' means that it does not return a copy, the renaming is done over the original data frame.
                 else:
                     pass            
 
@@ -50,19 +47,14 @@ def normalize_data(paths = list):
         else:
             data_file.drop(labels=title, axis='columns', inplace=True)
 
-    logging.info("Creating connection with DB Server...")    
-    engine = create_engine("postgresql+psycopg2://root:root@127.0.0.1:5432/postgres")
+    en = en.connect()
  
     try:
-        data_file.to_sql('alkemydb', engine, if_exists= 'replace', index= False)
-    
-        engine.execute("""ALTER TABLE Alkemydb 
+        data_file.to_sql('alkemydb', en, if_exists= 'replace', index= False)
+        en.execute("""ALTER TABLE Alkemydb 
                    ADD fecha_de_carga date DEFAULT """ + "'" + datetime.now().strftime("%Y-%m-%d") + "'" + ";")
-
         logging.info("Table 'alkemydb' created/updated")
-        
     except Exception as er:
-        logging.error(traceback.fomat_exc())
-    finally:
-        logging.info("Closing connection...")
-        engine.dispose()
+        logging.error(traceback.format_exc(er))
+
+        

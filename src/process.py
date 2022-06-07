@@ -1,7 +1,13 @@
 import pandas as pd
 import engine
+import logging
+from datetime import datetime
 
 def reg_q():
+    
+    log_name = f"process_{datetime.now().strftime('%Y-%m-%d')}.log"
+
+    logging.basicConfig(filename=log_name, level = logging.INFO, format='%(asctime)s %(levelname)-8s %(message)s', datefmt='%a, %d %b %Y %H:%M:%S')
     
     en = engine.eng_con()
     
@@ -12,7 +18,7 @@ def reg_q():
                """)
     
     df = pd.DataFrame(results)    
-    print(df)
+    logging.info(df)
     
     results1 = en.execute("""
                 SELECT COUNT(*)
@@ -24,9 +30,9 @@ def reg_q():
                 SELECT COUNT(*)
                 FROM salas_cine;
                """)
-    
+
     df1 = pd.DataFrame(results1)    
-    print(df1)   
+    logging.info(df1)
 
     results2 = en.execute("""
                 SELECT "Categoría", "Provincia", COUNT("Cod_Loc")
@@ -36,7 +42,7 @@ def reg_q():
                """)
     
     df2 = pd.DataFrame(results2)    
-    print(df2)
+    logging.info(df2)
 
 reg_q()
 

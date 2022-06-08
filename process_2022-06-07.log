@@ -1,0 +1,137 @@
+Tue, 07 Jun 2022 22:38:19 INFO     Creating connection with DB Server...
+Tue, 07 Jun 2022 22:38:19 INFO                                 Categoría  count
+0               Bibliotecas Populares   2017
+1                       Salas de cine    329
+2  Espacios de Exhibición Patrimonial   1182
+Tue, 07 Jun 2022 22:38:34 INFO     Creating connection with DB Server...
+Tue, 07 Jun 2022 22:38:34 INFO                                 Categoría  count
+0               Bibliotecas Populares   2017
+1                       Salas de cine    329
+2  Espacios de Exhibición Patrimonial   1182
+Tue, 07 Jun 2022 22:38:34 INFO        museos
+0    2017
+1    1182
+2     329
+Tue, 07 Jun 2022 22:38:34 INFO                     Categoría                        Provincia  count
+0   Bibliotecas Populares                     Buenos Aires    543
+1   Bibliotecas Populares                        Catamarca     38
+2   Bibliotecas Populares                            Chaco     70
+3   Bibliotecas Populares                           Chubut     48
+4   Bibliotecas Populares  Ciudad Autónoma de Buenos Aires     43
+..                    ...                              ...    ...
+68          Salas de cine                       Santa Cruz      5
+69          Salas de cine                         Santa Fe     23
+70          Salas de cine              Santiago del Estero      5
+71          Salas de cine                 Tierra del Fuego      3
+72          Salas de cine                          Tucumán      8
+
+[73 rows x 3 columns]
+Tue, 07 Jun 2022 22:45:25 INFO     Creating connection with DB Server...
+Tue, 07 Jun 2022 22:45:25 INFO                                 Categoría  cantidad
+0               Bibliotecas Populares      2017
+1                       Salas de cine       329
+2  Espacios de Exhibición Patrimonial      1182
+Tue, 07 Jun 2022 22:45:25 INFO        museos
+0    2017
+1    1182
+2     329
+Tue, 07 Jun 2022 22:45:25 INFO                     Categoría                        Provincia  cantidad
+0   Bibliotecas Populares                     Buenos Aires       543
+1   Bibliotecas Populares                        Catamarca        38
+2   Bibliotecas Populares                            Chaco        70
+3   Bibliotecas Populares                           Chubut        48
+4   Bibliotecas Populares  Ciudad Autónoma de Buenos Aires        43
+..                    ...                              ...       ...
+68          Salas de cine                       Santa Cruz         5
+69          Salas de cine                         Santa Fe        23
+70          Salas de cine              Santiago del Estero         5
+71          Salas de cine                 Tierra del Fuego         3
+72          Salas de cine                          Tucumán         8
+
+[73 rows x 3 columns]
+Tue, 07 Jun 2022 22:55:01 INFO     Creating connection with DB Server...
+Tue, 07 Jun 2022 22:55:01 INFO                                 Categoría  Cantidad
+0               Bibliotecas Populares      2017
+1                       Salas de cine       329
+2  Espacios de Exhibición Patrimonial      1182
+Tue, 07 Jun 2022 22:58:48 INFO     Creating connection with DB Server...
+Tue, 07 Jun 2022 22:58:48 INFO                                 Categoría  Cantidad
+0               Bibliotecas Populares      2017
+1                       Salas de cine       329
+2  Espacios de Exhibición Patrimonial      1182
+Tue, 07 Jun 2022 23:00:00 INFO     Creating connection with DB Server...
+Tue, 07 Jun 2022 23:00:00 INFO                                 Categoría  Cantidad
+0               Bibliotecas Populares      2017
+1                       Salas de cine       329
+2  Espacios de Exhibición Patrimonial      1182
+Tue, 07 Jun 2022 23:00:18 INFO     Creating connection with DB Server...
+Tue, 07 Jun 2022 23:00:18 INFO                                 Categoría  Cantidad
+0               Bibliotecas Populares      2017
+1                       Salas de cine       329
+2  Espacios de Exhibición Patrimonial      1182
+Tue, 07 Jun 2022 23:00:52 INFO     Creating connection with DB Server...
+Tue, 07 Jun 2022 23:00:52 INFO                                 Categoría  Cantidad
+0               Bibliotecas Populares      2017
+1                       Salas de cine       329
+2  Espacios de Exhibición Patrimonial      1182
+Tue, 07 Jun 2022 23:01:23 INFO     Creating connection with DB Server...
+Tue, 07 Jun 2022 23:01:23 INFO                                 Categoría  Cantidad
+0               Bibliotecas Populares      2017
+1                       Salas de cine       329
+2  Espacios de Exhibición Patrimonial      1182
+Tue, 07 Jun 2022 23:04:01 INFO     Creating connection with DB Server...
+Tue, 07 Jun 2022 23:04:01 INFO                                 Categoría  Cantidad
+0               Bibliotecas Populares      2017
+1                       Salas de cine       329
+2  Espacios de Exhibición Patrimonial      1182
+Tue, 07 Jun 2022 23:04:01 INFO        count      Categoría
+0    329  Salas de Cine
+1   2017    Bibliotecas
+2   1182         Museos
+Tue, 07 Jun 2022 23:04:01 INFO                     Categoría                        Provincia  Cantidad
+0   Bibliotecas Populares                     Buenos Aires       543
+1   Bibliotecas Populares                        Catamarca        38
+2   Bibliotecas Populares                            Chaco        70
+3   Bibliotecas Populares                           Chubut        48
+4   Bibliotecas Populares  Ciudad Autónoma de Buenos Aires        43
+..                    ...                              ...       ...
+68          Salas de cine                       Santa Cruz         5
+69          Salas de cine                         Santa Fe        23
+70          Salas de cine              Santiago del Estero         5
+71          Salas de cine                 Tierra del Fuego         3
+72          Salas de cine                          Tucumán         8
+
+[73 rows x 3 columns]
+Tue, 07 Jun 2022 23:05:49 INFO     Creating connection with DB Server...
+Tue, 07 Jun 2022 23:05:49 INFO                                 Categoría  Cantidad
+0               Bibliotecas Populares      2017
+1                       Salas de cine       329
+2  Espacios de Exhibición Patrimonial      1182
+Tue, 07 Jun 2022 23:05:58 INFO     Creating connection with DB Server...
+Tue, 07 Jun 2022 23:05:59 INFO                                 Categoría  Cantidad
+0               Bibliotecas Populares      2017
+1                       Salas de cine       329
+2  Espacios de Exhibición Patrimonial      1182
+Tue, 07 Jun 2022 23:05:59 INFO            Categoría  Cantidad
+0    Bibliotecas      2017
+1         Museos      1182
+2  Salas de Cine       329
+Tue, 07 Jun 2022 23:05:59 INFO                     Categoría                        Provincia  Cantidad
+0   Bibliotecas Populares                     Buenos Aires       543
+1   Bibliotecas Populares                        Catamarca        38
+2   Bibliotecas Populares                            Chaco        70
+3   Bibliotecas Populares                           Chubut        48
+4   Bibliotecas Populares  Ciudad Autónoma de Buenos Aires        43
+..                    ...                              ...       ...
+68          Salas de cine                       Santa Cruz         5
+69          Salas de cine                         Santa Fe        23
+70          Salas de cine              Santiago del Estero         5
+71          Salas de cine                 Tierra del Fuego         3
+72          Salas de cine                          Tucumán         8
+
+[73 rows x 3 columns]
+Tue, 07 Jun 2022 23:13:29 INFO     Creating connection with DB Server...
+Tue, 07 Jun 2022 23:14:38 INFO     Creating connection with DB Server...
+Tue, 07 Jun 2022 23:15:09 INFO     Creating connection with DB Server...
+Tue, 07 Jun 2022 23:15:51 INFO     Creating connection with DB Server...
+Tue, 07 Jun 2022 23:21:15 INFO     Creating connection with DB Server...

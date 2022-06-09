@@ -3,6 +3,7 @@ import locale
 import os
 import logging
 from datetime import datetime 
+from decouple import config
 
 # Used to change from english to spanish to use the month name in spanish for the folder name
 locale.setlocale(locale.LC_ALL, ("es_ES", "UTF-8"))
@@ -15,7 +16,7 @@ def download_dbs(nombre, url):
     logging.info("Downloading from %s", url)
     
     # Constructs the folders names: "category/YYYY-month"
-    db = "data"  + "/" + nombre + "/" + datetime.now().strftime("%Y") + "-" + datetime.now().strftime("%B")
+    db = config('DOWNLOADS_DIR')  + "/" + nombre + "/" + datetime.now().strftime("%Y") + "-" + datetime.now().strftime("%B")
     
     # Checks if it already exist, if not, creates it
     existe = os.path.exists(db)

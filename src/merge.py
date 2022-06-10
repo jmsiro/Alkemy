@@ -3,9 +3,12 @@ import traceback
 import pandas as pd
 from datetime import datetime
 
+logger = logging.getLogger(__name__)
+
 def normalize_data(en, paths = list):
-    """This function normalizes data from the raw tables and creates a new table with the needed data."""
-    
+    """
+    Normalizes data from the raw tables and creates a new table with the needed data.
+    """
     dfs = []
     for file in paths:
         dfs.append(pd.read_csv(file))

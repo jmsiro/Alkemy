@@ -3,12 +3,12 @@ import traceback
 import pandas
 from datetime import datetime
 
-
-#dialect+driver://username:password@host:port/database
+logger = logging.getLogger(__name__)
 
 def upload_file(path, table_name, en):
-    """This function takes de data files and store them in the database."""
-           
+    """
+    Takes de source files and store them in the database.
+    """
     en = en.connect()
     
     data_file = pandas.read_csv(path)

@@ -5,12 +5,15 @@ import logging
 from datetime import datetime 
 from decouple import config
 
+logger = logging.getLogger(__name__)
+
 # Used to change from english to spanish to use the month name in spanish for the folder name
 locale.setlocale(locale.LC_ALL, ("es_ES", "UTF-8"))
 
 def download_dbs(nombre, url):
-    """This funtion downloads the data files."""
-
+    """
+    Downloads source files.
+    """
     # Request - Downloads the file
     r = requests.get(url, allow_redirects=True)
     logging.info("Downloading from %s", url)

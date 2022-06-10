@@ -24,4 +24,6 @@ Before starting:
  2. Engine manager in 'engine.py' will use the first four items of this information to make the connetion to the DB.
  3. Items 5 and 6 are used to set the credentials to access the PostgreSQL database administrator.
  4. The last three will be used by the functions in process.py.
- NOTE: In my case, I use docker-compose to test everything, the file with the services it is also in the repository. 
+ NOTE: In my case, I use docker-compose to test everything, the file with the services it is also in the repository.
+
+ To execute the program, open the terminal, place in its repository and tun the command python src/main.py.

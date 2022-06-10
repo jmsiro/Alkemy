@@ -114,6 +114,3 @@ def reg_cin():
     logging.info("File saved as: %s", name)
     
     engine.eng_dis(en)
-    
-reg_conj()
-reg_cin()
